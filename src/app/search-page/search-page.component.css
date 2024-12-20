@@ -1,0 +1,9 @@
+label{
+    margin-bottom: 5px;
+}
+.form-select{
+    height: calc(2.5rem + 2px);
+}
+button{
+    height: calc(2.5rem + 2px);
+}

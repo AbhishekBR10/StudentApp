@@ -1,0 +1,39 @@
+/* .dropdown:hover > .dropdown-menu, .dropend:hover > .dropdown-menu{
+    display: block;
+    margin-top: .125em;
+    margin-left: .125em;
+} */
+/* @media screen and (min-width:769px) {
+    .dropend:hover > .dropdown-menu{
+        position: absolute;
+        top: 0;
+        left: 100%;
+        margin-left: .125em;
+    }
+} */
+.nav-link{
+    color: white;
+    text-decoration: none;
+
+}
+.nav-link:hover{
+    color: lightblue;
+}
+.navSearch .nav-link:hover{
+    cursor: pointer;
+    
+}
+#navSearch .nav-link:hover i{
+
+    transform: scale(1.6);
+    
+    
+}
+#navSearch .nav-link i{
+
+   transition: transform 0.3s ease;
+    
+}
+#navSearch{
+    margin-left: auto;
+}

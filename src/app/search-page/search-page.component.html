@@ -1,0 +1,44 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-mod-5">
+            <label for="department" class="form-label fw-bold">Department</label>
+            <select id="department" class="form-select" [(ngModel)]="selectedDepartment" name="department" required>
+            <option value="" disabled selected>choose a department</option>
+            <option *ngFor="let department of departments" [value]="department">{{department}}</option>
+        </select>
+        </div>
+        <div class="col-mod-5">
+            <label for="section" class="form-label fw-bold">Section</label>
+            <select id="section" class="form-select" [(ngModel)]="selectedSection" name="section" required>
+            <option value="" disabled selected>choose a section</option>
+            <option *ngFor="let section of sections" [value]="section">{{section}}</option>
+        </select>
+        </div>
+        <div class="col-md-2 d-flex align-items-end">
+            <button type="button" class="btn btn-primary w-100" (click)="onSearch()">Search</button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    
+    <div class="col-mod-4 mb-3" *ngFor="let student of students">
+        <a [routerLink]="['/student',student.id]" class="btn btn-info">View Details</a> 
+        <div class="card shadow">
+            <div class="card-body">
+                
+                <h5 class="card-title">{{student.firstName}}
+                    {{student.lastName}}
+                </h5>
+                <p class="card-text">
+                    <strong>Phone:</strong>
+                    {{student.phoneNumber}} <br>
+                <strong>Age:</strong>{{student.age}} <br>
+                <strong>Department:</strong>{{student.department}} <br>
+                <strong>Section:</strong>{{student.section}}
+                </p>
+                
+            </div>
+        </div>
+    </div>
+</div>

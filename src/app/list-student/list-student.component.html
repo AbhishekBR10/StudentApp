@@ -1,0 +1,29 @@
+
+  <table class="table table-stripped">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+            <th>Age</th>
+            <th>Department</th>
+            <th>Section</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td>{{student.firstName}}</td>
+            <td>{{student.lastName}}</td>
+            <td>{{student.phoneNumber}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.department}}</td>
+            <td>{{student.section}}</td>
+            <td>
+                <button (click)="updateStudent(student.id)" class="btn btn-info"><fa-icon [icon]="faPenToSquare"></fa-icon></button>
+                <button (click)="deleteStudent(student.id)" class="btn btn-danger" style="margin-left: 10px;"><fa-icon [icon]="faCircleXmark"></fa-icon></button>
+                <button (click)="viewStudent(student.id)" class="btn btn-success" style="margin-left: 10px;"><fa-icon [icon]="faEye"></fa-icon></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
